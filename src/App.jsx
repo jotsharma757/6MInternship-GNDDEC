@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 
 function App() {
@@ -29,3 +30,19 @@ function App() {
 }
 
 export default App;
+=======
+import Child from "./ReactMemo";
+import Parent from "./ParentMemo";
+import SuspenseP from "./Suspense";
+import  Dropdown from "./Suspense";
+ function App(){
+  return(
+    // <SuspenseP/>
+    <Dropdown/>
+    // <Parent/>
+  )
+ }
+ export default App
+ 
+ 
+>>>>>>> d6335a118e53fc2eb34b62c8bf495820f5718ff3

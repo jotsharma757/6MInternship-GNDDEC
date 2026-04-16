@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery--getAttribute, setAttribute</title>
+</head>
+<body>
+    <img id="main" src="img1.jpg" alt="" width="100">
+    <div id="images">
+        <img id="img1" src="img2.jpg" alt="" width="100">
+        <img id="img2" src="img3.jpg" alt="" width="100">
+        <img id="img3" src="img4.jpg" alt="" width="100">
+    </div>
+
+    <script>
+        const main = document.querySelector("#main");
+        const images = document.querySelector("#images");
+
+        images.addEventListener("click", (e) =>{
+            console.log(e);
+            
+            if(e.target.nodeName === 'IMG'){
+                main.src = e.target.src;
+            }
+        });
+    </script>
+</body>
+</html>

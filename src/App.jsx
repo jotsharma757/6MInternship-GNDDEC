@@ -1,22 +1,23 @@
-// App.jsx
-import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
- import User from "./user";
+ import React from "react";
+ import Form from "./formHandling";
+ import Controlled from "./Controlled";
+ import Uncontrolled from "./Uncontrolled";
+ import Validation from "./FormValidation";
+ import ReactHook from "./ReactHookForm";
+//  import LoginForm from "./eghook";
+ import Login from "./Zod";
+ import UAxios from "./Axios";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div>
-        <h1>Users List</h1>
-        <Link to="/user/1">User 1</Link> |{" "}
-        <Link to="/user/2">User 2</Link>
-
-        <Routes>
-          <Route path="/user/:id" element={<User />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+ function App(){
+  return(
+  // <Form/>
+  // <Controlled/>
+ // < Uncontrolled/>
+  // <Validation/>
+  
+  <ReactHook/>
+//   <UAxios/>
+//   <Login/>
   );
-}
-
-export default App;
+ }
+ export default App;

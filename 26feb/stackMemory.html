@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack MMt</title>
+</head>
+
+<body>
+    <script>
+        // //Example 1
+        // function first() {
+        //     let a = 10;
+        //     second();
+        //     console.log("Back in first");
+        // }
+
+        // function second() {
+        //     let b = 20;
+        //     console.log("Inside second");
+        // }
+
+        // first();
+
+        //Example 2
+        // function a() {
+        //     let x = 1;
+        //     b();
+        //     console.log("Back in a");
+        // }
+
+        // function b() {
+        //     let y = 2;
+        //     c();
+        //     console.log("Back in b");
+        // }
+
+        // function c() {
+        //     let z = 3;
+        //     console.log("Inside c");
+        // }
+
+        // a();
+
+        // // //Example 3
+        // function one() {
+        //     console.log("A");
+        //     two();
+        //     console.log("B");
+        // }
+
+        // function two() {
+        //     console.log("C");
+        //     three();
+        //     console.log("D");
+        // }
+
+        // function three() {
+        //     console.log("E");
+        // }
+
+        // one();
+
+        //Example 4
+        // function outer() {
+        //     console.log("Start");
+
+        //     inner();
+
+        //     console.log("End");
+        // }
+
+        // function inner() {
+        //     console.log("Inside");
+
+        //     return;
+
+        //     console.log("After Return");
+        // }
+
+        // outer();
+
+        //----d
+        function test() {
+            console.log("1");
+
+            return function () {
+                console.log("2");
+            };
+
+            console.log("3");
+        }
+
+        const result = test();
+        result();
+
+       
+
+
+    </script>
+</body>
+
+</html>

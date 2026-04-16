@@ -1,23 +1,14 @@
- import React from "react";
- import Form from "./formHandling";
- import Controlled from "./Controlled";
- import Uncontrolled from "./Uncontrolled";
- import Validation from "./FormValidation";
- import ReactHook from "./ReactHookForm";
-//  import LoginForm from "./eghook";
- import Login from "./Zod";
- import UAxios from "./Axios";
-
+import Child from "./ReactMemo";
+import Parent from "./ParentMemo";
+import SuspenseP from "./Suspense";
+import  Dropdown from "./Suspense";
  function App(){
   return(
-  // <Form/>
-  // <Controlled/>
- // < Uncontrolled/>
-  // <Validation/>
-  
-  <ReactHook/>
-//   <UAxios/>
-//   <Login/>
-  );
+    // <SuspenseP/>
+    <Dropdown/>
+    // <Parent/>
+  )
  }
- export default App;
+ export default App
+ 
+ 

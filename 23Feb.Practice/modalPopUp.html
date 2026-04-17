@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal-PopUp </title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-700 ">
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+    <div class="w-auto h-auto px-4 py-2 bg-white border rounded-xl  ">
+    <button id="openBtn" class="w-20 px-4 py-2 m-6  bg-blue-300 hover:bg-blue-900 cursor-pointer border rounded-lg   tranistion ">Open</button>
+    <div>
+        <div id="modal" class="hidden">
+            <p class="px-5">Hey!!Good Morning. Have a great Day</p>
+            <button id="closeBtn" class="w-20 border rounded-lg cursor-pointer bg-blue-300 hover:bg-blue-900 px-4 py-2 m-5">Close</button>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById("openBtn")
+        const modal = document.getElementById("modal")
+        const closeBtn = document.getElementById("closeBtn")
+
+        openBtn.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+        });
+        closeBtn.addEventListener("click", () =>{
+            modal.classList.add("hidden");
+        })
+        modal.addEventListener("click", (e) =>{  
+            if(e.target === modal){
+                modal.classList.add("hidden")
+            }
+        });
+        document.addEventListener("keydown",(e) =>{
+            if(e.key === "j"){
+                modal.classList.add("hidden")
+            }
+        });
+        document.addEventListener("keydown",(e) => {
+            if(e.key === "h"){
+                modal.classList.remove("hidden")
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Sort</title>
+</head>
+
+<body>
+    <script>
+        const cities = ["Delhi", "mumbai", "CHENNAI", "bangalore"];
+        const sort = [...cities].sort((a, b) =>
+            a[0].toLowerCase().localeCompare((b[0].toLowerCase()))
+        );
+        console.log(sort);
+
+        //sort by length
+        const words = ["cat", "elephant", "dog", "tiger"];
+        const sorting = [...words].sort((a, b) => a.length - b.length
+        );
+        console.log(sorting);
+        //
+        // const arr = ["10", "2", "15"];
+        // arr.sort();
+        // console.log(arr);
+
+        // const arr = ["a", "B", "c", "A"];
+        // arr.sort();
+        // console.log(arr);
+
+        const arr = ["100", "01", "9"];
+        arr.sort();
+        console.log(arr);//01,100,9
+
+        const _arr = ["100", "25", "9"];
+        _arr.sort((a, b) => a - b);
+        console.log(_arr);//9,125,100
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Examples</title>
+</head>
+
+<body>
+    <h1>Reduce Examples</h1>
+    <script>
+        //sum of numbers
+        const numbers = [1, 2, 4, 5, 6];
+        const result = numbers.reduce((sum, numbers) => {
+            return sum + numbers;
+        }, 0);
+        console.log(result);
+        //multiply of numbers
+        const _numbers = [1, 2, 4, 5, 6];
+        const _result = _numbers.reduce((mul, numbers) => {
+            return mul * numbers;
+        }, 1);
+        console.log(_result);
+
+        //Find total price
+        const prices = [100, 250, 50];
+        const price = prices.reduce((sum, prices) => {
+            return sum + prices
+        }, 0);
+        console.log(price);
+
+        //Count total items
+        const items = ["pen", "book", "eraser", "scale"];
+        const item = items.reduce((total) => {
+            return total + 1;
+        }, 0);
+        console.log(item);
+        //Join words into a sentence
+        const words = ["JavaScript", "is", "fun"];
+        const word = words.reduce((text, words) => {
+            return text + " " + words;
+        });
+        console.log(word);
+
+        //Find the biggest number
+        const nums = [5, 12, 3, 21, 8];
+        const biggest = nums.reduce((max, nums) => {
+            return nums > max ? nums : max;
+        },)
+        console.log(biggest);
+    </script>
+</body>
+
+</html>

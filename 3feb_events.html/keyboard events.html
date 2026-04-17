@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard events</title>
+</head>
+<body>
+     <button id="btn4">keyup</button>
+    <button id="btn5">keydown</button>
+    <button id="btn6">keypress</button>
+     
+
+    <script>
+        const btn4 = document.querySelector("#btn4");
+        const btn5 = document.querySelector("#btn5");
+        const btn6 = document.querySelector("#btn6");
+        
+
+        btn4.addEventListener("keyup", (event) =>{
+            alert("keyup")
+        });
+        btn5.addEventListener("keydown", (event) =>{
+            alert("keydown")
+        });
+        btn6.addEventListener("keypress", (event) =>{
+            alert("keypress")
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+<body>
+    <div id="div">
+        <button id="btn">submit</button>
+    </div>
+    
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const div = document.querySelector("#div");
+       // const hi = document.querySelector("#hi");
+
+       
+        div.addEventListener("click",()=>{
+            console.log("div clicked");
+        })
+         btn.addEventListener("click",(e)=>{
+            console.log("btn clicked");
+        })
+    </script>
+</body>
+</html>

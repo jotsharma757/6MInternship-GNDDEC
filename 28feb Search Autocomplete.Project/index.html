@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project--Search AutoComplete</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-zinc-500 flex items-center justify-center ">
+    <div class="border rounded-s m-7 p-10">
+        <h1 class="font-bold text-xl m-3 flex items-center justify-center">Search AutoComplete</h1>
+        <input type="text" placeholder="Searching...." id="input" class="border rounded-lg bg-white m-2 px-5 py-1">
+        <ul id="lists"></ul>
+    </div>
+
+    <!---Javscript-->
+
+    <script>
+        const input = document.getElementById("input")
+        const lists = document.getElementById("lists")
+
+        const colours = ["Red", "Blue", "Green", "Orange", "Skyblue", "white", "laptop"]
+        let cache = {}; //cache box
+
+        //debounce---
+        function debounce(func, delay) {
+            let timer;
+            return function (...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    func(...args);
+                }, delay);
+            };
+        }
+
+
+        //Search
+        function search(query) {
+            if (!query) {
+                lists.innerHTML = "";
+                return;
+            }
+
+            if (cache[query]) {
+                display(cache[query], query)
+                return;
+            }
+            const filtered = colours.filter(color => color.toLowerCase().includes(query.toLowerCase()));
+            cache[query] = filtered;
+            display(filtered, query)
+        }
+
+        //Highlight
+        function highlight(text, query) {
+            const regex = new RegExp(`(${query})`, "gi")
+            return text.replace(regex, `<mark>$1</mark>`);
+        }
+
+
+        //Results
+        function display(color, query) {
+            lists.innerHTML = color
+                .map(color => `<li> ${highlight(color, query)} </li>`)
+                .join("");
+
+        }
+        const debouncedSearch = debounce((e) => {
+            search(e.target.value);
+        }, 1000);
+
+        input.addEventListener("input", debouncedSearch);
+    </script>
+
+
+</body>
+
+</html>

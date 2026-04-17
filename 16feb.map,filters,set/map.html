@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <h3>Map</h3>
+    <script>
+        const numbers = [1, 2, 3, 4]
+        const newNumbers = numbers.map((num => num * 3))
+        console.log(newNumbers)
+
+        const old = [
+            { name: "charllie", age: 15 },{name:"abc",age:18}];
+
+            old.map((user)=>{
+                console.log(user);
+                
+            })
+        const newName = old.map(user => user.name);
+        console.log(newName);
+        
+        const age = old.map(user => user.age)
+        // console.log(newName);
+        console.log(age);
+
+
+
+    </script>
+</body>
+
+</html>

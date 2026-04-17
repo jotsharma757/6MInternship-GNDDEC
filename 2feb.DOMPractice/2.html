@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle-show/hide content</title>
+    <style>
+  .hidden {
+    display: none;
+  }
+</style>
+
+</head>
+<body>
+    <button id="btn">Show / Hide </button>
+    <p id="text" > helloe</p>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const text = document.querySelector("#text");
+
+    btn.addEventListener("click", () =>{
+        console.log(text.classList)
+       text.classList.toggle("hidden");
+
+    });
+    </script>
+</body>
+</html>

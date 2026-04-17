@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "24marb",
   "version": "1.0.0",
   "description": "",
@@ -13,4 +14,56 @@
   "dependencies": {
     "cors": "^2.8.6"
   }
+=======
+<<<<<<< HEAD
+  "name": "23mar",
+=======
+<<<<<<< HEAD
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My first Node.js project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "keywords": [],
+  "type": "commonjs"
+=======
+  "name": "19mar",
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+<<<<<<< HEAD
+=======
+    "js-cookie": "^3.0.5",
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "vite": "^8.0.1"
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> ff0c6e415366ea621f77c03703287ff3febab9c0
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+>>>>>>> 52006db16b0cf5fa9e2331b87d84bf86536bbb6f
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayOfArray-Sorting</title>
+</head>
+
+<body>
+    <script>
+        // // const names = [
+        // //     ["Alice", 22],
+        // //     ["Bob", 20],
+        // //     ["Charlie", 25]
+        // // ];
+        // // const sorted = [...names].sort((a, b) => a[0].slice(-1).localeCompare(b[0].slice(-1)));
+        // // console.log(sorted);
+
+        // // const names = [
+        // //     ["Alice", 22],
+        // //     ["Bob", 20],
+        // //     ["Christina", 25]
+        // // ];
+
+        // // const sorted = [...names].sort((a, b) => a[0].length - b[0].length);
+        // // console.log(sorted);
+
+
+        // // const names = [
+        // //     ["Alice", 22],
+        // //     ["Bob", 20],
+        // //     ["Christina", 25]
+        // // ];
+
+         
+
+        // const colors = ["red", "blue", "green", "yellow"]; //string with sorting
+        // const newData = [...colors].sort((a, b) =>
+        //     a[0].localeCompare(b[0])   
+        // );
+        // console.log(newData)
+
+
+        //Sort by first number (ascending).
+        const data = [
+            [5, "orange"],
+            [2, "apple"],
+            [8, "banana"]
+        ];
+        const sort = [...data].sort((a, b) => (a[0] - b[0]));
+        console.log(sort);
+
+        //Sort by second value (alphabetical order).
+        const alpha = [
+            {"1": "mango"},{"2": "mangoo"},{"3": "mangoo"}
+        ];
+        const sorting = [...alpha].sort((a, b) => a[1].localeCompare(b[1]));
+        console.log(sorting);
+
+        //Sort by first number (descending)
+        const data1 = [
+            [10, "A"],
+            [3, "B"],
+            [7, "C"]
+        ];
+        const sorted = [...data1].sort((a, b) => (b[0] - a[0]))
+        console.log(sorted);
+
+        //Sort by length of string (short name first).
+        const data2 = [
+            [1, "elephant"],
+            [2, "dog"],
+            [3, "tiger"]
+        ];
+        const sortt = [...data2].sort((a,b)=> a[1].length-b[1].length)
+        console.log(sortt)
+
+
+
+
+    </script>
+</body>
+
+</html>

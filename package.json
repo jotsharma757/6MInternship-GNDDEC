@@ -1,5 +1,34 @@
 {
+<<<<<<< HEAD
   "name": "3april",
+=======
+<<<<<<< HEAD
+  "name": "2april",
+=======
+<<<<<<< HEAD
+  "name": "1april",
+=======
+<<<<<<< HEAD
+  "name": "27mar",
+=======
+<<<<<<< HEAD
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.3.3"
+  }
+=======
+<<<<<<< HEAD
+  "name": "26mar",
+=======
+<<<<<<< HEAD
+  "name": "25march",
+=======
+<<<<<<< HEAD
+  "name": "24marb",
+>>>>>>> 12390f87e2abafc4172dae4fc79761c9143aa47d
+>>>>>>> 5a647357115fbd5056d41e229152d87d71689830
+>>>>>>> 45b3345317a95e051b9d5e9e5857cf3a19fcc8bc
+>>>>>>> 17d5359c8bc7bcc87f281d5daeb17920d3c1d462
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +40,101 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^5.2.1",
     "pg": "^8.20.0"
   }
+=======
+<<<<<<< HEAD
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  }
+=======
+<<<<<<< HEAD
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  }
+=======
+<<<<<<< HEAD
+    "express": "^5.2.1",
+    "mongoose": "^9.3.3"
+  }
+=======
+    "cors": "^2.8.6"
+  }
+=======
+<<<<<<< HEAD
+  "name": "23mar",
+=======
+<<<<<<< HEAD
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My first Node.js project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "keywords": [],
+  "type": "commonjs"
+=======
+  "name": "19mar",
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+>>>>>>> a6e92165fd0aadb9284983c3f0de58681037f5f3
+>>>>>>> 0856593aea8e67b0e281a285fc8b7262d9b6c40b
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+<<<<<<< HEAD
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+=======
+<<<<<<< HEAD
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+=======
+<<<<<<< HEAD
+=======
+    "js-cookie": "^3.0.5",
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+>>>>>>> a6e92165fd0aadb9284983c3f0de58681037f5f3
+>>>>>>> 0856593aea8e67b0e281a285fc8b7262d9b6c40b
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "vite": "^8.0.1"
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ff0c6e415366ea621f77c03703287ff3febab9c0
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+>>>>>>> 52006db16b0cf5fa9e2331b87d84bf86536bbb6f
+>>>>>>> a6e92165fd0aadb9284983c3f0de58681037f5f3
+>>>>>>> 0856593aea8e67b0e281a285fc8b7262d9b6c40b
+>>>>>>> fe2c4863789d1dbcc79fe3203caeff97378433d4
+>>>>>>> 12390f87e2abafc4172dae4fc79761c9143aa47d
+>>>>>>> 5a647357115fbd5056d41e229152d87d71689830
+>>>>>>> 45b3345317a95e051b9d5e9e5857cf3a19fcc8bc
+>>>>>>> 17d5359c8bc7bcc87f281d5daeb17920d3c1d462
 }

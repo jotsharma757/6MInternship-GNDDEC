@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Event</title>
+    <!-- LOAD : When everything on the page is Loaded (READY)
+        DOMContent : When HTML is ready
+    RESIZE : When browser size changes (Window size)
+    SCROLL : When page is scrolled -->
+</head>
+<body  style="height: 2000px">
+   
+    <script>
+       
+        window.addEventListener("load", () =>{
+            console.log("loaded");
+        });
+        document.addEventListener("DOMContentLoaded", () =>{
+            console.log("DOMContent Loaded");
+        });
+         window.addEventListener("resize", () =>{
+            console.log("Resize");
+        });
+         window.addEventListener("scroll", () =>{
+            console.log("scroll");
+        });
+    </script>
+</body>
+</html

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Searching</title>
+</head>
+
+<body>
+    <h1>Searching using array</h1>
+    <script>
+        //indexof----POSITION OF A VALUE
+        const fruits = ["apple", "banana", "orange"];
+        console.log(fruits.indexOf("orange"));//existed
+
+        const _newFruits = fruits.indexOf("mango");
+        console.log(_newFruits);//notexisted
+
+        //includes----CHECK THE VALUE IT IS PRESENT IN THE ARRAY OR NOT
+        const _fruits = ["apple", "banana", "orange"];
+        const __newFruits = _fruits.includes("mango");
+        console.log(__newFruits);
+
+        //finds---FIND AN ELEMENT BASED ON CONDITION--Goes element by element, applies the condition, and stops at the first one that is true
+        const person = [
+            { name: "charlie", age: 23 },
+
+            { name: "chario", age: 26 },
+            { name: "chrles", age: 27 },
+            { name: "chip", age: 28 },
+        ];
+        const _person = person.find(person => person.age > 25);
+        console.log(_person);
+
+        //findindexof
+        const people = [
+            { name: "charlie", age: 23 },
+            { name: "chip", age: 28 },
+            { name: "chario", age: 26 },
+            { name: "chrles", age: 27 }
+        ];
+        const _people = people.findIndex(p => p.age > 25);
+        console.log(_people);
+
+
+    </script>
+</body>
+
+</html>

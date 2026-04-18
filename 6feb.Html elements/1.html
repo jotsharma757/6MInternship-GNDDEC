@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML elements-- add, delete, update</title>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Enter text">
+    <button id="addBtn">Add</button>
+    <ul class="li"></ul>
+
+    <script>
+        const input = document.querySelector("#input");
+        const addBtn = document.querySelector("#addBtn");
+        const list = document.querySelector(".li");
+// input.style.backgroundColor="blue";
+        function addItem() {
+            input.style.backgroundColor="red";
+            //add item
+            if (input.value === "") return;
+            const li = document.createElement("li");
+            const span = document.createElement("span");
+            span.textContent = input.value;
+            span.addEventListener("click", () => {
+                span.style.textDecoration = "line-through";
+                span.style.color = "blue";
+            });
+            li.appendChild(span);
+            list.appendChild(li);
+            input.value = "";
+
+            //delete 
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "delete";
+            deleteButton.addEventListener("click", () => {
+                deleteItem(deleteButton);
+            });
+            //edit
+            const editButton = document.createElement("button");
+            editButton.textContent = "edit";
+            editButton.addEventListener("click", () => {
+                 const newText = prompt("Edit item", span.textContent);
+                if (newText) {
+                    span.textContent = newText;
+
+                }
+            });
+            li.appendChild(deleteButton);
+            li.appendChild(editButton);
+        }
+        //add item
+        addBtn.addEventListener("click", addItem);
+        //delete item
+        function deleteItem(button) {
+            const li = button.parentElement;
+            list.removeChild(li);
+        }
+    </script>
+</body>
+
+</html>

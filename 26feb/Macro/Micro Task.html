@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //MacroTask----A macrotask is a normal or big task that runs after the current code is finished.
+        //MicroTask ----A microtask is a small and high-priority task.
+
+
+        //Example
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("Macrotask");
+        }, 0);
+
+        Promise.resolve().then(() => {
+            console.log("Microtask");
+        });
+
+        console.log("End");
+    </script>
+</body>
+
+</html>

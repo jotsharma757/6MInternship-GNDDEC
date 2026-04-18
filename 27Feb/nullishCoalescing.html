@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>??--Nullish Coalescing</title>
+</head>
+
+<body>
+    <script>
+
+       // ?? (Nullish Coalescing) ---It gives a default value BUT only when the value is: null nd undefined
+        //1--0
+        // let age = 0;
+        // let result = age ?? 18;
+        // console.log(result);
+
+        // //2--null
+        // let value = null ?? 10 ?? 20;
+        // console.log(value);
+
+        // //3--undefined
+        // let a;
+        // let b = a ?? 13;
+        // console.log(b);
+
+        // //3--false
+        // let value = true;
+        // let result = value ?? false
+        // console.log(result);
+
+        //4--""---op is nothing or ""---d
+        let values = "";
+        let results = values ?? 16
+        console.log(results);
+
+        //
+        //let value = "" ?? "Hello";
+        //console.log(value);
+
+        //
+        // let a = null;
+        // let b = 0;
+        // let c = 5;
+        // let d = 3
+
+        // let result = a ?? (b || c && d);
+        // console.log(result);//5
+
+        // 
+        let value = 10 ?? false   ? "A" : "B";
+        console.log(value);
+
+    </script>
+
+</body>
+
+</html>

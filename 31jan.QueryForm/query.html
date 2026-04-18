@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Query Form</title>
+
+</head>
+
+<body class="min-h-screen bg-gray-200 flex items-center justify-center ">
+
+    <div class="rounded-xl bg-white-300 border-2 w-full max-w-md align-center shadow-lg shadow-black-500/50">
+        <h1 class="text-center font-bold text-3xl my-10 bg-pink-200">Student Query Form</h1>
+
+        <form id="studentForm" class="space-y-5">
+            <div class="text-center">
+                <label>Name :</label>
+                <input id="name" type="text" placeholder="Enter your Full Name" required
+                    class="w-80 px-4 py-2 border rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500 " />
+            </div>
+
+
+
+            <div class="text-center">
+                <label>Roll No. :</label>
+                <input id="roll" type="text" placeholder="Roll no." required
+                    class="w-80 px-4 py-2 border rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500" />
+            </div>
+
+            <div class="text-center">
+                <label>E-mail : </label>
+                <input id="email" type="text" placeholder="E-mail" required
+                    class="w-80 px-4 py-2 border rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500" />
+            </div>
+
+            <div class="text-center">
+                <label>Query</label>
+                <input id="query" type="text" placeholder="query"
+                    class="w-80 px-4 py-2 border rounded-lg focus:outline-none focus:ring-3 focus:ring-blue-500" />
+            </div>
+            <div class="py-2 flex justify-center"><button type="submit"
+                    class="w-60 bg-blue-600 text-white py-2  rounded-lg hover:bg-blue-700 transition">
+                    Submit</button></div>
+            </button>
+        </form>
+    </div>
+    <script src="script_form.js">
+
+    </script>
+</body>
+
+
+</html>

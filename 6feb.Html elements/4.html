@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle uses</title>
+</head>
+<body>
+    <input type="text" name="" id="text" placeholder="Enter value">
+    <button type="button" id="add">Add</button>
+    <button id="toggle" text="">Toggle</button>
+
+    <script>
+        const text = document.querySelector("#text");
+        const add = document.querySelector("#add");
+        const toggle = document.querySelector("#toggle");
+
+        function addItem() {
+            //add item
+            if (text.value === "") return;
+            const li = document.createElement("li");
+            li.textContent = text.value;
+            list.appendChild(li);
+            text.value = "";
+        }
+        add.addEventListener("click", addItem)
+        
+        add.addEventListener("click", addItem);
+        //toggle
+        toggle.addEventListener("click", () => {
+            if (text.style.display === "none") {
+                text.style.display = "block";
+                toggle.textContent = "Hide";
+            } else {
+                text.style.display = "none";
+                toggle.textContent = "Show";
+            }
+        });
+    </script>
+</body>
+</html>

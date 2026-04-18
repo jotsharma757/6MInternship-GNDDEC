@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-EH</title>
+</head>
+
+<body>
+    <h2 id="username"></h2>
+    <p id="status"></p>
+
+    <script>
+         async function load() {
+            const nameEl = document.getElementById("username");
+            const statusEl = document.getElementById("status");
+
+            statusEl.textContent = "......Loading";
+            nameEl.textContent = "";
+            
+            try {
+                const res = await fetch("https://jsonplaceholder.typicode.com/users/1")
+                if (!res.ok) {
+                    throw new Error("invalid");
+                }
+                const data = await res.json();
+                nameEl.textContent = data.name;
+                statusEl.textContent = "";
+            }
+            catch (error) {
+                
+                statusEl.textContent = `Failed to fetch data:${error}`;
+                statusEl.style.color = "red";
+                nameEl.textContent = "";
+            }
+        }
+
+        load()
+
+        // async function getImage() {
+        //     try {
+        //         const res = await fetch("https://dog.ceo/api/breeds/image/random")
+
+        //         if (!res.ok) {
+        //             throw new error("failed to fetch");
+        //         }
+        //         const data = await res.json();
+        //         const img = document.createElement("img");
+        //         img.src = data.message;
+        //         img.width = 200;
+
+        //         document.body.appendChild(img);
+        //     } catch (error) {
+        //         const p = document.createElement("p");
+        //         p.textContent = "error" + error.message;
+        //         document.body.appendChild(p);
+        //     }
+
+        // }
+        // getImage()
+
+        // // Fetch Simgle Post
+
+        // async function post() {
+        //     try {
+        //         const res = await fetch("https://jsonplaceholder.typicode.com/posts/1")
+        //         if (!res.ok) {
+        //             throw new Error("Res is invalid")
+        //         }
+        //         const data = await res.json();
+
+        //         const p = document.createElement("p")
+        //         p.textContent = data.title;
+        //         document.body.appendChild(p);
+
+        //     } catch (error) {
+        //         const p = document.createElement("p")
+        //         p.textContent = "error : " + error.message;
+        //         document.body.appendChild(p);
+        //     }
+
+        // }
+
+        // post()
+
+        // //fetch invalid url 
+
+        // async function link() 
+        // {
+        //     try{
+        //          const res = await fetch ("https://jsonplaceholder.typicode.com/posts/99999")
+        //          if( !res.ok){
+        //             throw new Error("Url is invalid");
+        //          }
+        //          const data = await res.json();
+        //          const p = document.createElement("p");
+        //          p.textContent = data.title;
+        //          document.body.appendChild(p)
+        //     }catch(error){
+        //         const p = document.createElement("p")
+        //         p.textContent = "error : " +error.message;
+        //         document.body.appendChild(p) 
+        //     }
+
+        // }
+        // link()
+
+
+        //Show Error in HTML (Not Console)
+        // async function show() {
+        //     const head = document.getElementById("head");
+        //     const errorEl = document.getElementById("error");
+
+        //     try {
+        //         const res = await fetch("https://jsonplaceholder.typicode.com/users/99999");
+
+        //         if (!res.ok) {
+        //             throw new Error("Invalid request");
+        //         }
+
+        //         const data = await res.json();
+        //         head.textContent = data.name;   // correct property
+        //         errorEl.textContent = "";
+
+        //     } catch (error) {
+        //         head.textContent = "";
+        //         errorEl.textContent = "Error: " + error.message;
+        //         errorEl.style.color = "red";
+        //     }
+        // }
+
+        // show();
+
+
+       
+    </script>
+</body>
+
+</html>

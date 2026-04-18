@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--Examples--</title>
+</head>
+
+<body>
+
+    <script>
+        //Searching users by name or email
+        const user = [
+            { name: "charlie", email: "charlie@gmail.com", age: 22 },
+            { name: "alice", email: "alice@gmail.com", age: 23 },
+            { name: "nuriz", email: "nuriz@gmail.com", age: 21 }
+        ];
+        const name = user.find(u => u.name === "alice")
+        console.log(name)
+        const email = user.find(u => u.email === "charlie@gmail.com")
+        console.log(email)
+
+        //Searching products in e-commerce apps
+        const product = [
+            { name: "laptop", price: 10000 },
+            { name: "phone", price: 299900 },
+        ];
+        const result = product.find(item => item.price > 1000);
+        console.log(result);
+
+        //Searching numbers by range or condition
+        const numbers = [23, 24, 21, 45, 46, 67]
+        const number = numbers.find(n => n > 46)
+        console.log(number)
+        const newNumber = numbers.find(n => n < 46 && n > 21)
+        console.log(newNumber)
+
+    </script>
+</body>
+
+</html>

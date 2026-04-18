@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p-Number Guessing Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+
+    <div class="w-full max-w-md rounded-xl border-2 shadow-lg shadow-black p-5" id="box">
+
+        <button id="reset" class="bg-green-700 rounded-lg hover:bg-green-900 transition border-2 text-white w-20 mb-3">
+            Reset
+        </button>
+
+        <h1 class="text-xl font-bold mb-5 text-center">Number Guessing Game</h1>
+
+        <input type="text" id="text" class="text-center w-full px-4 py-3 bg-white mb-3"
+            placeholder="Enter number (1-10)">
+
+        <button id="btn" class="bg-blue-700 rounded-lg hover:bg-blue-900 transition border-2 text-white w-full py-2">
+            Check
+        </button>
+
+        <p class="text-center font-bold mt-3">
+            Total Lives : <span id="lives">5</span>
+        </p>
+        <ul id="message" class="text-center font-bold mt-3"></ul>
+    </div>
+    <!---Previous Data-->
+    <div class="w-full max-w-md rounded-xl border-2 shadow-lg shadow -black p-5 m-5" id="data">
+        <h2 class="text-xl font-bold mb-5 text-center">Previous Data</h2>
+
+        <ul id="previous" class="text-left mt-3 list-disc pl-5"></ul>
+
+
+    </div>
+
+    <script>
+        const text = document.querySelector("#text");
+        const btn = document.querySelector("#btn");
+        const livesEl = document.querySelector("#lives");
+        const message = document.querySelector("#message");
+        const reset = document.querySelector("#reset");
+        const previous = document.querySelector("#previous");
+console.log("btn",btn);
+
+
+        let game = JSON.parse(localStorage.getItem("game")) || {
+            randomNum: Math.floor(Math.random() * 10) + 1,
+            lives: 5,
+            message: "",
+            gameOver: false
+        };
+        livesEl.textContent = game.lives;
+        message.textContent = game.message;
+        btn.disabled = game.gameOver;
+
+        let previousData = JSON.parse(localStorage.getItem("previousData")) || []
+console.log(previousData,'1');
+
+        function saveGame() {
+            localStorage.setItem("game", JSON.stringify(game));
+        }
+        function savepreviousData() {
+console.log(previousData,'2');
+
+            localStorage.setItem("previousData", JSON.stringify(previousData)) || {
+
+            }
+        }
+
+        function showpreviousData() {
+            previous.innerHTML = "";
+            previousData.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.textContent = `${index + 1}. Guess: ${item.guess} | message: ${item.message} | Lives: ${item.lives}`;
+                previous.appendChild(li);
+
+            });
+        }
+        showpreviousData();
+
+        btn.addEventListener("click", () => {
+            const userGuess = Number(text.value);
+
+            if (!userGuess || userGuess < 1 || userGuess > 10) {
+                message.textContent = "Enter a number between 1 and 10";
+                saveGame();
+                text.value = "";
+                return;
+            }
+            // let resultText = "";
+
+            if (userGuess === game.randomNum) {
+                message.textContent = "Congratulations! You won!";
+                game.gameOver = true;
+                btn.disabled = true;
+            } else {
+                game.lives--;
+
+                if (game.lives === 0) {
+                    message.textContent = " Game Over! You lost all lives";
+                    game.gameOver = true;
+                    btn.disabled = true;
+                } else if (userGuess < game.randomNum) {
+                    message.textContent = " Number is Low";
+                } else {
+                    message.textContent = " Number is High";
+                }
+            }
+           
+            game.message = message.textContent;
+            livesEl.textContent = game.lives;
+            previousData.push({
+                guess: userGuess,
+                message:message.textContent,
+                lives: game.lives
+                
+            });
+
+            saveGame();
+            savepreviousData();
+            showpreviousData();
+            text.value = "";
+        });
+
+        reset.addEventListener("click", () => {
+            let reset = confirm("Are You sure ??"); // confirm
+            if (reset) {
+                alert("Reset Game");
+            } else {
+                alert("Not Reset")
+            }
+
+            game = {
+                randomNum: Math.floor(Math.random() * 10) + 1,
+                lives: 5,
+                message: "",
+                gameOver: false
+            };
+            previous.innerHTML=""
+            previousData=[]
+
+            localStorage.removeItem("game");
+            localStorage.removeItem("previousData")
+console.log(previousData,"3");
+
+            livesEl.textContent = game.lives;
+            message.textContent = "";
+            btn.disabled = false;
+            text.value = "";
+        });
+    </script>
+
+</body>
+
+</html>

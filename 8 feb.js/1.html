@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASics of Calculator</title>
+</head>
+
+<body>
+    <div class="cal">
+        <input type="text" id="text" placeholder="Type....">
+        <div>
+            <button class="operators">AC</button>
+            <button class="operators">%</button>
+            <button class="operators">del</button>
+            <button class="operators">/</button>
+        </div>
+
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operators">*</button>
+        </div>
+
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operators">-</button>
+        </div>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operators">+</button>
+        </div>
+
+        <div></div>
+        <button class="operators">=</button>
+        <button class="operators">.</button>
+        <button class="operators">0</button>
+        <button class="operators">00</button>
+    </div>
+    </div>
+    <script>
+        const cal = document.querySelector('.cal');
+        const text = document.querySelector("#text");
+        let num1 = "";
+        let num2 = "";
+        let operator = "";
+
+        cal.addEventListener("click", (e) => {
+            
+            if (e.target.tagName != "BUTTON") return;
+            const value = e.target.innerText; //
+
+            if (value === "AC") {
+                num1 = "";
+                num2 = "";
+                operator = "";
+                text.value = "";
+                return; //
+            } else if (value === "del") {
+                if (operator === "") {
+                    num1 = num1.slice(0, -1);
+                    text.value = num1;
+                } else {
+                    num2 = num2.slice(0, -1);
+                    text.value = num2;
+                }
+            } else if (value === "+" || value === "-" || value === "*" || value === "/" || value === "%") {
+                operator = value;
+                text.value = num1 + operator;
+
+
+            } else if (value === "=") {
+                let number1 = Number(num1);
+                let number2 = Number(num2);
+                let result;
+                switch (operator) {
+                    case "+":
+                        result = number1 + number2;
+                        break;
+                    case "-":
+                        result = number1 - number2;
+                        break;
+                    case "*":
+                        result = number1 * number2;
+                        break;
+                    case "/":
+                        result = number1 / number2;
+                        break;
+                    case "%":
+                        result = number1 % number2;
+                        break;
+                    default:
+                        result = "Invalid operator";
+                }
+                text.value = result;
+                num1 = result.toString();
+                num2 = "";
+            } else {
+                if (operator === "") {
+                    num1 += value;
+                    text.value = num1;
+                } else {
+                    num2 += value;
+                    text.value = text.value + num2;
+
+                }
+            }
+            console.log(num1,num2,operator);
+
+        });
+    </script>
+</body>
+
+</html>

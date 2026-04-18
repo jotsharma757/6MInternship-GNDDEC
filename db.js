@@ -1,54 +1,11 @@
-<<<<<<< HEAD
-// db.js
-const { Pool } = require("pg");
-
-const pool = new Pool({
-  user: "postgres",       // your DB username
-  host: "localhost",
-  database: "postgres", // database name
-  password: "jotsharma143",
-  port: 5432
-});
-
-module.exports = pool;
-=======
-<<<<<<< HEAD
  
-=======
-<<<<<<< HEAD
->>>>>>> 45b3345317a95e051b9d5e9e5857cf3a19fcc8bc
 const { Pool } = require("pg");
+require("dotenv").config();
+console.log("DB URL:", process.env.DATABASE_URL);
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "postgres",
-  password: "jotsharma143", // ⚠️ same password you set during install
-  port: 5432,
-<<<<<<< HEAD
-});     
-module.exports = pool;
-
-=======
+  connectionString: process.env.DATABASE_URL,
+ 
 });
 
-module.exports = pool;
-=======
-const mongoose = require("mongoose");
-
-const MONGO_URI = "mongodb://localhost:27017/mydatabase";
-
-const connectDB = async () => {
-  try {
-    await mongoose.connect(MONGO_URI); // no extra options needed
-    console.log("MongoDB connected successfully!");
-  } catch (error) {
-    console.error("MongoDB connection failed:", error.message);
-    process.exit(1);
-  }
-};
-
-module.exports = connectDB;
->>>>>>> 5a647357115fbd5056d41e229152d87d71689830
->>>>>>> 45b3345317a95e051b9d5e9e5857cf3a19fcc8bc
->>>>>>> d10b4916252abfd76dd4ad1c3efdf4ceacfe0127
+module.exports = { pool };

@@ -1,18 +1,44 @@
-const connectDB = require("./db");
-const User = require("./models/user");
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
 
-connectDB(); // connect to MongoDB
+ 
+const { AllMovies } = require("./model/AllMovies");
+const { createUserTable } = require("./model/user");
+const { Mylist} = require("./model/MyList")
 
-// Get data from database
-const showUsers = async () => {
-  try {
-    const users = await User.find(); // fetch all documents
-    console.log("Users in DB:", users);
-  } catch (error) {
-    console.error("Error fetching users:", error.message);
-  } finally {
-    process.exit(0); // close the script
-  }
-};
 
-showUsers();
+const authRoutes = require("./routes/authroutes");
+const movieRoutes = require("./routes/movieroutes");
+const allMoviesRoutes = require("./routes/allmoviesroutes");
+const myListroutes = require("./routes/myListroutes");
+
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+// routes
+app.use("/api/auth", authRoutes);
+app.use("/api/movies", movieRoutes);
+app.use("/api/allmovies", allMoviesRoutes);
+app.use("/api/mylist", myListroutes);
+
+// DB setup
+
+createUserTable();
+ 
+AllMovies();
+Mylist();
+
+app.get("/", (req, res) => {
+  res.send("API running 🚀");
+});
+
+ ;
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});

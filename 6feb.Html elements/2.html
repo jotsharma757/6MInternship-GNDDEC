@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text" placeholder="Enter the Text">
+    <button id="add">Add</button>
+    <ul class="list"></ul>
+
+    <script>
+        const text = document.querySelector("#text");
+        const add = document.querySelector("#add");
+        const list = document.querySelector(".list");
+
+        function addItem() {
+            //add item
+            if (text.value === "") return;
+            const li = document.createElement("li");
+
+            const span = document.createElement("span");
+            span.textContent = text.value;
+
+            span.addEventListener("click", () => {
+                span.style.textDecoration = "line-through";
+            });
+            li.appendChild(span);
+            list.appendChild(li);
+            text.value = " ";
+            //delete 
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "delete";
+            deleteButton.addEventListener("click", () => {
+                deleteItem(deleteButton);
+            });
+            // edit
+            const editButton = document.createElement("button");
+            editButton.textContent = "edit";
+            editButton.addEventListener("click", () => {
+                const newText = prompt("Edit item", span.textContent);
+                if (newText) {
+                    span.textContent = newText;
+                }
+
+            });
+
+            li.appendChild(deleteButton);
+            li.appendChild(editButton);
+            }
+        add.addEventListener("click", addItem);
+        function deleteItem(button) {
+            const li = button.parentElement;
+            list.removeChild(li);
+        }
+
+    </script>
+</body>
+
+</html>

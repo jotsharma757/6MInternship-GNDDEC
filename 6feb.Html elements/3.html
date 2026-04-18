@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add CSS--</title>
+
+
+    
+</head>
+
+<body>
+    <p class="para">hi</p>
+    <button id="remove">Remove</button>
+    <button class="addBtn">Change Color</button>
+    <!-- <div class="first">
+        <div class="second"> -->
+    <form id="form">
+        <input type="text" name="" id="text" placeholder="Enter text">
+        <button type="button" id="add">Add</button>
+    </form>
+    <ul id="list"></ul>
+
+    <!-- </div>
+
+    </div> -->
+
+    <script>
+        const remove = document.querySelector("#remove");
+        const para = document.querySelector(".para");
+        const addBtn = document.querySelector(".addBtn");
+        const form = document.querySelector("#form");
+        const text = document.querySelector("#text");
+        const add = document.querySelector("#add");
+        const list = document.querySelector("#list");
+        //css
+        form.style.padding = "10px";
+        form.style.display = "flex";
+        form.style.justifyContent = "center";
+        add.style.backgroundColor = "red";
+        add.style.color = "white";
+        add.style.fontSize = "20px";
+        add.style.padding = "10px 20px";
+        add.style.border = "none";
+        add.style.borderRadius = "5px";
+        add.style.cursor = "pointer";
+
+
+        function addItem() {
+            //add item
+            if (text.value === "") return;
+            const li = document.createElement("li");
+            li.textContent = text.value;
+            list.appendChild(li);
+            text.value = "";
+        }
+        add.addEventListener("click", addItem)
+        
+        // REMOVE
+        remove.addEventListener("click", () => {
+            para.remove();
+        });
+        addBtn.addEventListener("click", () => {
+            para.style.width = "100%";
+            para.style.height = "100vh";
+            para.style.color = "red";
+            para.style.fontSize = "90px";
+            para.style.backgroundColor = "skyblue";
+            para.style.font = "bold";
+            para.style.border = '2px solid black';
+            para.style.borderRadius = "10px";
+            para.style.padding = "10px";
+            para.style.display = "flex";
+            para.style.justifyContent = "center";
+            para.style.alignItems = "center";
+            para.style.backgroundImage = "url('https://tse3.mm.bing.net/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3')";
+            para.style.backgroundSize = "cover";
+            para.style.backgroundPosition = "center";
+            para.style.textShadow = "2px 2px 4px #000000";
+            para.style.padding = "20px";
+            para.style.cursor = "pointer";
+
+        });
+
+    </script>
+</body>
+
+</html>

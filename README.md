@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+>>>>>>> a6e92165fd0aadb9284983c3f0de58681037f5f3
+>>>>>>> 0856593aea8e67b0e281a285fc8b7262d9b6c40b
+>>>>>>> f00716b219dda3753bfb549e70257a8dd70e7a4d
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -14,3 +27,19 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+# 6MInternship-GNDDEC
+Full Stack MERN Internship
+>>>>>>> d6335a118e53fc2eb34b62c8bf495820f5718ff3
+>>>>>>> 15d99047d900984c2b08b31d1332ccd68fc457aa
+>>>>>>> a6e92165fd0aadb9284983c3f0de58681037f5f3
+>>>>>>> 0856593aea8e67b0e281a285fc8b7262d9b6c40b
+>>>>>>> f00716b219dda3753bfb549e70257a8dd70e7a4d

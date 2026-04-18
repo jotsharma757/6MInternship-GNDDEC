@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let counter = 0;
+        function doTask() {
+            counter++;
+            if (counter < 3) throw "Not ready yet!";
+            return "Task done!";
+        }
+
+        function retryTask(retries = 5) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const result = doTask();
+                    console.log(result);
+                    return;
+                } catch (error) {
+                    console.log(`Attempt ${i + 1} failed: ${error}`);
+                }
+            }
+            console.log("Failed after all retries.");
+        }
+
+        retryTask();
+    </script>
+</body>
+
+</html>

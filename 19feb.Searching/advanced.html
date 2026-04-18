@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Searching Method</title>
+</head>
+
+<body>
+    <h1>Some,Filter,every</h1>
+    <script>
+        //Filter--Goes through the array and returns a new array with all elements that satisfy a condition.
+        const numbers = [21, 31, 41, 44, 45, 46]
+        const result = numbers.filter((n => n > 31));
+        console.log(result);
+
+        //Some--Checks if at least one element satisfies a condition.
+        const _numbers = [21, 31, 41, 44, 45, 46]
+        const _result = _numbers.some((n => n > 46));
+        console.log(_result);
+        
+        //Every--Checks if every element satisfies a condition.
+        const __numbers = [21, 31, 41, 44, 45, 46]
+        const __result = __numbers.every((n => n > 44));
+        console.log(__result);
+
+        const num = [5, 10, 15, 20];
+        const allPositive = num.every(n => n > 0);
+        console.log(allPositive); // true
+
+
+
+
+    </script>
+</body>
+
+</html>

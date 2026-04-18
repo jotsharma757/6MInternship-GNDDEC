@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+        //1.Pomise all()----it runs if all promises are resolved, if rejected then it gives error. 
+        // const promise1 = Promise.resolve("10")
+        // const promise2 = Promise.resolve("hi")
+        // const promise3 = Promise.resolve("990")
+
+        // 2.Promise.all([promise1, promise2, promise3])
+        //     .then(results => console.log(results))
+        //     .catch(error => console.log("one failed :", error));
+
+        // //Example--Promise race()----The new promise settles as soon as the first promise in the array settles (either resolved or rejected). It does not wait for all promises to finish—just the fastest one.
+
+        // const slow = new Promise(resolve => setTimeout(() => resolve("Slow!"), 50));
+        // const fast = new Promise(resolve => setTimeout(() => resolve("Fast!"), 100));
+
+        // 3. Promise.race([fast, slow])
+        //     .then(result => console.log(result))
+        //     .catch(error => console.log(error));
+
+        // //example--promise.allSettled()----Promise.allSettled() takes an array of promises and waits for all of them to finish, no matter if they succeed or fail.
+        // const p1 = Promise.resolve(10);
+        // const p2 = Promise.reject("Error occurred");
+        // const p3 = Promise.resolve(30);
+
+        // 4.Promise.allSettled([p1, p2, p3])
+        //     .then(results => console.log(results));
+
+        //5.Promise.any():- Resolves as soon as the first promise succeeds. Ignores rejections unless all fail.
+        const p4 = Promise.reject("Error occurred");
+        const p5 = Promise.resolve(30);
+
+        Promise.any([p4, p5])
+            .then(results => console.log(results));
+
+        
+
+    </script>
+</body>
+
+</html>

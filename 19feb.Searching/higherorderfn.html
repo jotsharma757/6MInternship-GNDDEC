@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOFn</title>
+</head>
+
+<body>
+    <h2>higher order fucntion</h2>
+    <script>
+        const numbers = [2, 4, 6];
+        const result = numbers.map((n => n * 3));
+        console.log(result);
+
+        //to get only the marks greater than 50.
+        const marks = [35, 80, 45, 90, 20];
+        const mark = marks.filter((n => n > 50))
+        console.log(mark);
+
+        //to print each city.
+        const cities = ["Delhi", "Mumbai", "Chennai"];
+        cities.forEach(function (city) {
+            console.log(city);
+        });
+
+
+        // Higher order function
+        function handleNumber(num, action) {
+            return action(num);
+        }
+
+        // Action function: double
+        function double(x) {
+            return x * 2;
+        }
+
+        // Action function: square
+        function square(x) {
+            return x * x;
+        }
+
+        // Using the higher order function
+        const result1 = handleNumber(5, double);
+        console.log(result1); // 10
+
+        const result2 = handleNumber(4, square);
+        console.log(result2); // 16
+
+
+
+
+
+    </script>
+</body>
+
+</html>

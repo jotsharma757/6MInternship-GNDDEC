@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic-error handling</title>
+</head>
+
+<body>
+    <script>
+        // function greet(user) {
+        //     if(user === null){
+        //         throw new Error("user name is null")
+        //     }
+        //     return "heyyyy" + " " + user;
+        // }
+        // try {
+        //     console.log(greet("Charlie"));
+        //     console.log(greet(null));
+
+        // } catch (error) {
+        //     console.log("Error : ", error.message)
+        // }
+
+        //example
+
+        // function withdraw(balance, amount) {
+
+        //     if (balance - amount < 0) {
+        //         throw new Error("not vaalid");
+        //     }
+        //     return balance - amount;
+        // }
+        // try {
+        //     console.log(withdraw(2000, 1000))
+
+        //     console.log(withdraw(1000, 2000))
+
+        // }
+        // catch (error) {
+        //     console.log("Error caught:", error.message);
+        // }
+        //example
+        // function person(age) {
+        //     if (age < 18) {
+        //         throw new Error("age is less for driving")
+        //     }
+        //     return age;
+        // }
+        // try {
+        //     console.log(person(23))
+        //     console.log(person(14));
+        // }
+        // catch (error) {
+        //     console.log("Error", error.message)
+        // }
+        // //example
+        // function checkPassword(password) {
+        //     if (password.length < 7) {
+        //         throw new Error(": pass is not stronng, must be 7 characters")
+        //     }
+        //     return password;
+        // }
+        // try {
+        //     console.log(checkPassword("1234567"));
+        // } catch (error) {
+        //     console.log("error", error.message)
+        // }
+
+        //example 
+        // function setDivide(a,b) 
+        // {
+        //     if(b === 0){
+        //         throw new Error(" : a and b not divided cz b = 0")
+        //     }
+        //     return a/b;
+
+        // }
+        // try{
+        //     console.log(setDivide(2,0))
+        // }
+        // catch(error){
+        //     console.log("Error", error.message)
+        // }
+
+        // //example : check username
+        // function validateUser(name){
+        //     if(name === ""){
+        //         throw Error(" : Name is required")
+        //     } 
+        //     return "Welcome" + " "+ name;
+        // }
+        // try{
+        //     console.log(validateUser(""));
+        //    // console.log(validateUser("charlie"))
+        // }
+        // catch(error){
+        //     console.log("error", error.message);
+
+        // }
+
+        // //withdraw money
+        // function withdraw(balance,amount){
+        //     if(balance-amount < 0){
+        //         throw new Error(": Amount can not be in negative. It is invalid ")
+        //     }
+        //     return balance- amount;
+        // }
+        // try{
+
+        //      console.log(withdraw(1500,1000))
+        //      console.log(withdraw(500,1000))
+        // }
+        // catch(error){
+        //     console.log("error",error.message)
+        // }
+
+        function divide(a, b) {
+            if (b === 0) {
+                throw new Error("Cannot divide by zero");
+            }
+            return a / b;
+        }
+
+        try {
+            console.log(divide(10, 0));
+        } catch (error) {
+            console.log("Error:", error.message);
+        }
+
+        console.log("Program continues...");
+
+    </script>
+</body>
+
+</html>
